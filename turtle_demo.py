@@ -33,3 +33,4 @@ fred.left(90)
 fred.forward(200)
 fred.left(90)'''
 
+#square, triangle, dot, circle, hexagon, octagon, rectangle

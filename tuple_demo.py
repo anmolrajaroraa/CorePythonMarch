@@ -3,7 +3,8 @@ Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 16:52:21)
 Type "help", "copyright", "credits" or "license()" for more information.
 >>> #list and tuple can store any type of data
 >>> #array stores only one type of data
->>> #list and tuple are of flexible size
+>>> #array is mutable but has fixed size
+>>> #tuple is not mutable and has fixed size also
 >>> tuple1 = (1,2,3,4,5)
 >>> tuple1
 (1, 2, 3, 4, 5)
@@ -31,3 +32,11 @@ Type "help", "copyright", "credits" or "license()" for more information.
 >>> tuple1[5:]
 ('text', True, 10.2, 2748)
 >>> 
+
+Task
+Login and register application
+users = [
+["ram@gmail.com", "ram123", "Ram Kumar"],
+[],
+[]
+    ]

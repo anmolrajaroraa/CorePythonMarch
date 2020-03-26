@@ -29,9 +29,12 @@
 #else is  part of for loop it is also terminated and never runs
 
 while True:
-    num = int(input("Enter a number : "))
+    #num = int(input("Enter a number : "))
 
-    if(num > 1):
+    a = 110 + 2 - 3 * 234
+
+    if( (num := int(input("Enter a number : ")) ) > 1):
+        print(num)
         for i in range(2, num // 2):
             if num % i == 0:
                 print("Not prime")
@@ -42,6 +45,6 @@ while True:
         print("Please enter number greater than 1")
         continue
 
-    choice = input("Do you want to continue : ")
-    if choice == "no":
+    #choice = input("Do you want to continue : ")
+    if input("Do you want to continue : ") == "no":
         break

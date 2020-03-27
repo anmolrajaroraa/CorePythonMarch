@@ -12,6 +12,7 @@ Ram       ram@gmail.com  ram123  24   Delhi   9999'''
 
 users = [
     [ "Ram Kumar", "ram@gmail.com", "ram123" ]
+    [ "Shyam Kumar"]
 ]
 
 while True:

@@ -9,6 +9,7 @@ print(len(products_list))
 
 for i in range(len(products_list)):
     product_name = products_list[i].find('div', '_3wU53n')
+    features = products_list[i].find('ul', 'vFw0gD')
     print(f'''
     Product no. {i+1}
     Product name - {product_name.text}
@@ -16,10 +17,6 @@ for i in range(len(products_list)):
     MRP - 
     Discount - 
     Rating - 
-    Features : 
-    1. 
-    2. 
-    3. 
-    4.
-    5.
-    ''')
+    Features : ''')
+    for feature in features:
+        print(" -> ", feature.text)

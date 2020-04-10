@@ -8,6 +8,7 @@ html = BS(response, "lxml")
 products_list = html.find_all("div", "IIdQZO _1SSAGr")
 # print(len(products_list))
 for i in range(len(products_list)):
+    print(products_list[i])
     brand_name = products_list[i].find("div", "_2B_pmu").text
     product_name = products_list[i].find("a", "_2mylT6").text
     current_price = products_list[i].find("div", "_1vC4OE").text

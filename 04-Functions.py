@@ -1,22 +1,36 @@
-def add(x, y):
+def takeInput():
+    first_num = int(input("Enter first number : "))
+    second_num = int(input("Enter second number : "))
+    return first_num, second_num
+
+
+def add():
+    x, y = takeInput()
     print(x + y)
-    break
 
 
-def subtract(x, y):
+def subtract():
+    x, y = takeInput()
     print(x - y)
 
 
-def multiply(x, y):
+def multiply():
+    x, y = takeInput()
     print(x * y)
 
 
-def divide(x, y):
+def divide():
+    x, y = takeInput()
     print(x / y)
 
 
-def calculateAll(x, y):
+def calculateAll():
+    x, y = takeInput()
     print(x + y, x - y, x * y, x / y)
+
+
+def errorHandler():
+    print("Invalid choice!")
 
 
 print('''
@@ -27,13 +41,12 @@ print('''
     5. CalculateAll
 ''')
 choice = int(input("Enter your choice : "))
-first_num = int(input("Enter first number : "))
-second_num = int(input("Enter second number : "))
 options = {
-    1: add(first_num, second_num),
-    2: subtract(first_num, second_num),
-    3: multiply(first_num, second_num),
-    4: divide(first_num, second_num),
-    5: calculateAll(first_num, second_num)
+    1: add,
+    2: subtract,
+    3: multiply,
+    4: divide,
+    5: calculateAll
 }
-options[choice]
+# options[choice](first_num, second_num)
+options.get(choice, errorHandler)()

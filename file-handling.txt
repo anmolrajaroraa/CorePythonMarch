@@ -1,0 +1,37 @@
+File Handling Steps:
+1. Open file in some mode (r,w,a)
+2. Perform the operation
+3. Close file
+
+Modes :
+1. r - read mode
+- File should exist as you want to read it
+- Writing new text is not allowed
+
+2. w
+- If file doesnt exists then it will be created
+- If file exists then it will be overwritten with new text
+- Reading text is not allowed
+
+3. a
+- If file doesnt exists then it will be created
+- If file exists then the new text is appended at the end of existing data
+- Reading text is not allowed
+
+4. r+
+ - read and write 
+ - you can write data but rules will be followed according to read mode
+
+5. w+
+ - write and read
+ - you can read data but rules will be followed according to write mode
+
+6. a+
+ - append and read
+
+Modes for binary files:
+7. rb
+8. wb
+some new data added by code
+some new data added by code
+some new data added by code

@@ -16,22 +16,22 @@
 # import io
 # import os
 
-# try:
-#     path = "file-handling.txt"
-#     with open(path) as fileStream:
-#         fileStream.read()
+try:
+    path = "file-handling-xyz.txt"
+    with open(path) as fileStream:
+        fileStream.read()
 # except FileNotFoundError:
 #     print("Please check that file already exists...")
 # except io.UnsupportedOperation:
 #     print("You cannot write when file is in read mode...")
-# except BaseException as err:
-#     print("Some error occured")
+except BaseException as err:
+    print("Some error occured")
 #     print("error is", err)
 # else:
 #     print("File read successfully....")
-# finally:
-#     if(os.path.isfile(path)):
-#         fileStream.close()
+finally:
+    #     if(os.path.isfile(path)):
+    fileStream.close()
 # databaseConnection.close()
 
 # try block is used to run code and check for any exceptions

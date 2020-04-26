@@ -54,6 +54,9 @@ def mainScreen():
     y2 = random.randint(0, height - 50)
     collisionSound = pygame.mixer.Sound("assets/point.wav")
     counter = 0
+    frogImage = pygame.image.load("assets/frog_2.png")
+    snakeBody = []
+    snakeLength = 1
 
     while True:
         for event in pygame.event.get():
@@ -85,18 +88,32 @@ def mainScreen():
         # pygame.draw.circle(screen, green, (x, y), 50)
 
         #scree, color, (x,y,length,breadth)
-        rect1 = pygame.draw.rect(screen, blue, (x, y, 50, 50))
-        rect2 = pygame.draw.rect(screen, red, (x2, y2, 50, 50))
+        # rect1 = pygame.draw.rect(screen, blue, (x, y, 50, 50))
+        # rect2 = pygame.draw.rect(screen, red, (x2, y2, 60, 53))
+        rect1 = pygame.Rect((x, y, 50, 50))
+        rect2 = pygame.Rect((x2, y2, 60, 53))
+        screen.blit(frogImage, (x2, y2))
         x += moveX
         # y += 1
         y += moveY
+
+        snakeBody.append([x, y])
+        if len(snakeBody) > snakeLength:
+            del snakeBody[0]
+        print(snakeBody)
 
         if rect1.colliderect(rect2):
             x2 = random.randint(0, width - 50)
             y2 = random.randint(0, height - 50)
             collisionSound.play()
             counter += 1
+            snakeLength += 5
             # width += 50
+
+        for bodyPart in snakeBody:
+            color = random.randint(0, 255), random.randint(
+                0, 255), random.randint(0, 255)
+            pygame.draw.rect(screen, color, (bodyPart[0], bodyPart[1], 50, 50))
 
         # if y > 450:
         #     # y -= 1
